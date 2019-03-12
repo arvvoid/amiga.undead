@@ -41,13 +41,14 @@ The program for the Arduino Leonardo microcontroler:
 
 [a500_keyboard_leonardo.ino](https://github.com/arvvoid/amiga.undead/blob/master/leonardo_a500_keyboard/a500_keyboard_leonardo.ino)
 
+
+[PIN OUT](https://github.com/arvvoid/amiga.undead/blob/master/leonardo_a500_keyboard/pins.txt)
+
 The joysticks connectors on the amiga motherboard turned to be unusable. It's very hard to pull them out from the board without breaking them. I will have to buy 2 DB9 connectors.
 
 In the meanwhile i tested the joysticks by connecting them directly to the microcontroler pins and all works fine, so when i get the connectors only cosmetic work is left to do.
 
 ![](images/image10.jpg)
-
-[PIN OUT](https://github.com/arvvoid/amiga.undead/blob/master/leonardo_a500_keyboard/pins.txt)
 
 ![](images/image8.jpg)
 
