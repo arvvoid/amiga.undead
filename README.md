@@ -39,7 +39,7 @@ I used an Arduino Leonardo microcontroler to turn the old custom made Amiga500 k
 
 The program for the Arduino Leonardo microcontroler:
 
-[](https://github.com/arvvoid/amiga.undead/blob/b6b04030866b6f2bb3079bb9a6f464275a48bb78/leonardo_a500_keyboard/a500_keyboard_leonardo.ino#L4-L188)
+[a500_keyboard_leonardo.ino](https://github.com/arvvoid/amiga.undead/blob/master/leonardo_a500_keyboard/a500_keyboard_leonardo.ino)
 
 The joysticks connectors on the amiga motherboard turned to be unusable. It's very hard to pull them out from the board without breaking them. I will have to buy 2 DB9 connectors.
 
@@ -47,9 +47,7 @@ In the meanwhile i tested the joysticks by connecting them directly to the micro
 
 ![](images/image10.jpg)
 
-PIN OUT
-
-[](https://github.com/arvvoid/amiga.undead/blob/b6b04030866b6f2bb3079bb9a6f464275a48bb78/leonardo_a500_keyboard/pins.txt#L1-L11)
+[PIN OUT](https://github.com/arvvoid/amiga.undead/blob/master/leonardo_a500_keyboard/pins.txt)
 
 ![](images/image8.jpg)
 
@@ -130,7 +128,7 @@ The GPIO pin 199 of the odroid board is connected to the base of the transistor.
 
 So now all is left to do is write a simple daemon program that will get started in the boot sequence to control the GPIO 199 on the Odroid:
 
-[](https://github.com/arvvoid/amiga.undead/blob/b6b04030866b6f2bb3079bb9a6f464275a48bb78/led_control/amiga_led_control_odroid.c#L6-L491)
+[amiga_led_control_odroid.c](https://github.com/arvvoid/amiga.undead/blob/master/led_control/amiga_led_control_odroid.c)
 
 ## Step 7: Done. Testing.
 
