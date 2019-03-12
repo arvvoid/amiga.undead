@@ -1,0 +1,11 @@
+Keyboard   Leonardo
+Connector  IO           
+
+1   KBCLK   8
+2   KBDATA  9
+3   KBRST   10
+4   5v      5v
+5   NC
+6   GND     GND
+7   LED1    5V
+8   LED2    -
