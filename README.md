@@ -107,13 +107,10 @@ There are 3 free programmable output pins on the Odroid board out of the box, mo
 For the led i need just one, so good to go.
 
 The led works ta 5v (or better say that led are actually 2 green leds combined together rated at 5V).
-
-So obviously is impossible to power it directly from the gpio pin.
+So is impossible to power it directly from the gpio pin.
 
 I put a little breadboard above the Odroid (so is possible to expand or make new stuff in the future) to build a simple circuit with a single NPN transistor to act as an electronic switch for the led. For that i will need to redirect the cathodes of the leds to the breadboard.
-
-
-So i de-soldered the green led from the keyboard board. And soldered back only the anodes and also connected them together in a series with a little wire.
+I de-soldered the green led from the keyboard board. And soldered back only the anodes and also connected them together in a series with a little wire.
 
 ![](images/image17.jpg)
 
