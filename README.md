@@ -133,7 +133,7 @@ So now all is left to do is write a simple daemon program that will get started 
 
 ## Step 7: Done. Testing.
 
-VIDEO: http://youtu.be/Rpm1c7raYDc
+[VIDEO: http://youtu.be/Rpm1c7raYDc](http://youtu.be/Rpm1c7raYDc)
 
 
 ![](images/image4.jpg)
