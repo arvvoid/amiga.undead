@@ -114,11 +114,22 @@ void loop() {
             // keydown message received------
             if (fn) {
               // special function with "Help" key 
-              if (key==0x50) keystroke(0x44,0);  // F11
-              else if (key==0x51) keystroke(0x45,0);  // F12
-              else if (key==0x5A) keystroke(0x53,0);  // NumLock
-              else if (key==0x5B) keystroke(0x47,0);  // ScrollLock
-              else if (key==0x5D) keystroke(0x46,0);  // PrtSc
+              if (key == 0x50) keystroke(0x44, 0);         // F11
+              else if (key == 0x51) keystroke(0x45, 0);    // F12
+              else if (key == 0x5A) keystroke(0x53, 0);    // NumLock
+              else if (key == 0x5B) keystroke(0x47, 0);    // ScrollLock
+              else if (key == 0x5D) keystroke(0x46, 0);    // PrtSc
+              else if (key == 0x52) keystroke(0x4B, 0);    // Arrow Up + Help = Page Up
+              else if (key == 0x51) keystroke(0x4E, 0);    // Arrow Down + Help = Page Down
+              else if (key == 0x50) keystroke(0x49, 0);    // Arrow Left + Help = Insert
+              else if (key == 0x3C) keystroke(0x7F, 0);    // F3 + Help = Mute
+              else if (key == 0x3D) keystroke(0x81, 0);    // F4 + Help = Volume Down
+              else if (key == 0x3E) keystroke(0x80, 0);    // F5 + Help = Volume Up
+              else if (key == 0x3F) keystroke(0x82, 0);    // F6 + Help = Play/Pause
+              else if (key == 0x40) keystroke(0x85, 0);    // F7 + Help = Stop
+              else if (key == 0x41) keystroke(0x86, 0);    // F8 + Help = Previous Track
+              else if (key == 0x42) keystroke(0x87, 0);    // F9 + Help = Next Track
+              else if (key == 0x43) keystroke(0x4A, 0);    // F10 + Help = Application/Special key
             }
             else {
               if (key==0x5A) keystroke(0x26,0x20); // (
