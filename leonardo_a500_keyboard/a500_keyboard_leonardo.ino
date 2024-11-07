@@ -25,7 +25,7 @@
 #define BITMASK_JOY1    0b10011111    // IO 0..4,6
 #define BITMASK_JOY2    0b11110011    // IO A0..A5    
 
-// Enumerate keyboard states for better readability
+// Enumerate keyboard states
 enum KeyboardState {
   SYNCH_HI = 0,
   SYNCH_LO,
