@@ -108,36 +108,44 @@ To connect the Amiga 500 keyboard to the Arduino Leonardo, refer to the followin
     </tr>
 </table>
 
-## Special Key Mappings and Help Key Combinations
 
-The **Help** key on the Amiga 500 keyboard serves as a modifier to enable additional special functions when combined with other keys. Here’s a list of the mappings for the Help key and its combinations.
+## Help Key Special Functions
 
-| Key Combination            | Function                   | HID Code |
-|----------------------------|----------------------------|----------|
-| **Help**                   | Help function              | 0x5F     |
-| **Help + Arrow Up**        | Page Up                    | 0x4B     |
-| **Help + Arrow Down**      | Page Down                  | 0x4E     |
-| **Help + Arrow Left**      | Insert                     | 0x49     |
-| **Help + F3**              | Mute                       | 0x7F     |
-| **Help + F4**              | Volume Down                | 0x81     |
-| **Help + F5**              | Volume Up                  | 0x80     |
-| **Help + F6**              | Play/Pause                 | 0x82     |
-| **Help + F7**              | Stop                       | 0x85     |
-| **Help + F8**              | Previous Track             | 0x86     |
-| **Help + F9**              | Next Track                 | 0x87     |
-| **Help + F10**             | Application/Special Key    | 0x65     |
-| **Help + F1**              | F11                        | 0x44     |
-| **Help + F2**              | F12                        | 0x45     |
+The **Help** key on the Amiga 500 keyboard serves as a modifier, enabling additional functions when combined with other keys. Below are the available combinations and their corresponding functions.
 
----
+| Key Combination               | Function                |
+|-------------------------------|-------------------------|
+| **Help**                      | Help function          |
+| **Help + F1**                 | F11                    |
+| **Help + F2**                 | F12                    |
+| **Help + NumL** (on numpad)   | Toggle NumLock         |
+| **Help + Scr L** (on numpad)  | Toggle ScrollLock      |
+| **Help + Ptr Sc** (on numpad) | Print Screen           |
+| **Help + Ins** (on numpad)    | Insert                 |
+| **Help + Del** (on numpad)    | Delete                 |
+| **Help + Pg Dn** (on numpad)  | Page Down              |
+| **Help + Pg Up** (on numpad)  | Page Up                |
+| **Help + Home** (on numpad)   | Home                   |
+| **Help + End** (on numpad)    | End                    |
+| **Help + F3**                 | Mute                   |
+| **Help + F4**                 | Volume Down            |
+| **Help + F5**                 | Volume Up              |
+| **Help + F6**                 | Play/Pause             |
+| **Help + F7**                 | Stop                   |
+| **Help + F8**                 | Previous Track         |
+| **Help + F9**                 | Next Track             |
+| **Help + F10**                | Application/Special Key|
 
-## Key Function Descriptions
+### Key Function Descriptions
 
 - **Help**: Activates specific special functions or multimedia controls when used in combination with other keys.
-- **Help + Arrow Keys**: Enables navigation functions:
-  - **Help + Arrow Up**: Page Up (scrolls up a page).
-  - **Help + Arrow Down**: Page Down (scrolls down a page).
-  - **Help + Arrow Left**: Insert (inserts content at the cursor).
+- **Help + Navigation Keys**:
+  - **Help + Ins**: Insert.
+  - **Help + Del**: Delete.
+  - **Help + Pg Dn**: Page Down.
+  - **Help + Pg Up**: Page Up.
+  - **Help + Home**: Home.
+  - **Help + End**: End.
 - **Help + F3 to F10**: Controls multimedia functions:
   - **Help + F3**: Mute the system audio.
   - **Help + F4**: Decrease the volume.
@@ -147,6 +155,7 @@ The **Help** key on the Amiga 500 keyboard serves as a modifier to enable additi
   - **Help + F8**: Go to the previous track.
   - **Help + F9**: Go to the next track.
   - **Help + F10**: Application or Special Key, can be used for opening context menus or other system functions.
+- **Help + F1 and F2**: Standard F11 and F12 functions.
 
 This wiring and mapping setup allows the Amiga 500 keyboard to interface with the Arduino Leonardo effectively, bringing additional functionality with the **Help** key for multimedia and navigation control. The setup is ideal for retrofitting the keyboard for modern applications while retaining its unique layout and feel.
 
