@@ -92,19 +92,19 @@ To connect the Amiga 500 keyboard to the Arduino Leonardo, refer to the followin
 
 <table>
     <tr>
-        <td>(<br>(0x5A)</td><td>)<br>(0x5B)</td><td>/ <br>(0x5C)</td><td>* <br>(0x5D)</td>
+        <td>( NumL<br>(0x5A)</td><td>) ScrL<br>(0x5B)</td><td>/ <br>(0x5C)</td><td>* PtrSc<br>(0x5D)</td>
     </tr>
     <tr>
-        <td>7<br>(0x3D)</td><td>8<br>(0x3E)</td><td>9<br>(0x3F)</td><td>- <br>(0x4A)</td>
+        <td>7 Home<br>(0x3D)</td><td>8<br>(0x3E)</td><td>9 Pg Up<br>(0x3F)</td><td>- <br>(0x4A)</td>
     </tr>
     <tr>
         <td>4<br>(0x2D)</td><td>5<br>(0x2E)</td><td>6<br>(0x2F)</td><td>+ <br>(0x5E)</td>
     </tr>
     <tr>
-        <td>1<br>(0x1D)</td><td>2<br>(0x1E)</td><td>3<br>(0x1F)</td><td rowspan="2">Enter<br>(0x43)</td>
+        <td>1 End<br>(0x1D)</td><td>2<br>(0x1E)</td><td>3 Pg Dn<br>(0x1F)</td><td rowspan="2">Enter<br>(0x43)</td>
     </tr>
     <tr>
-        <td colspan="2">0<br>(0x0F)</td><td>.<br>(0x3C)</td>
+        <td colspan="2">0 Ins<br>(0x0F)</td><td>. Del<br>(0x3C)</td>
     </tr>
 </table>
 
