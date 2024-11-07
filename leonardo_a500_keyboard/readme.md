@@ -126,6 +126,8 @@ The **Help** key on the Amiga 500 keyboard serves as a modifier to enable additi
 | **Help + F8**              | Previous Track             | 0x86     |
 | **Help + F9**              | Next Track                 | 0x87     |
 | **Help + F10**             | Application/Special Key    | 0x65     |
+| **Help + F1**              | F11                        | 0x44     |
+| **Help + F2**              | F12                        | 0x45     |
 
 ---
 
