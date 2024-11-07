@@ -1,5 +1,22 @@
-/*  Sketch taken from https://forum.arduino.cc/index.php?topic=139358.15  */
-/*  Original author: olaf, Steve_Reaver */
+/*
+ * Amiga 500 Keyboard to USB HID Converter
+ * Original code by olaf, Steve_Reaver (Sketch taken from https://forum.arduino.cc/index.php?topic=139358.15)
+ * Modifications, optimizations, and rewrites (c) 2024 by Luka "Void"
+ * GitHub: https://github.com/arvvoid/
+ * Contact: luka@lukavoid.xyz
+ * 
+ * This sketch converts an original Amiga 500 keyboard to a standard USB HID
+ * keyboard using an Arduino Leonardo. It includes support for joystick inputs
+ * and special function keys.
+ * 
+ * The code has been optimized for performance and readability, with direct 
+ * calls to HID().SendReport for efficient USB communication.
+ * 
+ * TODO: Macro recording and replay (planned next version)
+ */
+ 
+#include <Keyboard.h>
+#include <HID.h>
 
 #define BITMASK_A500CLK 0b00010000    // IO 8
 #define BITMASK_A500SP  0b00100000    // IO 9
@@ -34,11 +51,11 @@ uint8_t Joy, MemoJoy1, MemoJoy2, state, bitn, key, fn,keydown, ktab[0x68]={
 
 void setup() {
   // Joystick 1 (Port D)
-  DDRD = ~BITMASK_JOY1; // direction INPUT
+  DDRD = (uint8_t)(~BITMASK_JOY1); // direction INPUT
   PORTD = BITMASK_JOY1; // activate PULLUP
   
   // Joystick 2 (Port F)
-  DDRF = ~BITMASK_JOY2; // direction INPUT
+  DDRF = (uint8_t)(~BITMASK_JOY2); // direction INPUT
   PORTF = BITMASK_JOY2; // activate PULLUP
 
   // Keyboard (Port B)
@@ -50,14 +67,14 @@ void loop() {
   // Joystick 1
   Joy = ~PIND & BITMASK_JOY1;
   if (Joy != MemoJoy1) {
-    HID_SendReport(3, &Joy, 1);
+    HID().SendReport(3, &Joy, 1);
     MemoJoy1 = Joy;
   }  
 
 // Joystick 2
   Joy = ~PINF & BITMASK_JOY2;
   if (Joy != MemoJoy2) {
-    HID_SendReport(4, &Joy, 1);
+    HID().SendReport(4, &Joy, 1);
     MemoJoy2 = Joy;
   }  
   
@@ -125,14 +142,14 @@ void loop() {
               else if (key == 0x3F) keystroke(0x4B, 0);    // Page Up
               else if (key == 0x3D) keystroke(0x4A, 0);    // Home
               else if (key == 0x1D) keystroke(0x4D, 0);    // End
-              else if (key == 0x3C) keystroke(0x7F, 0);    // Help + F3 = Mute
-              else if (key == 0x3D) keystroke(0x81, 0);    // Help + F4 = Volume Down
-              else if (key == 0x3E) keystroke(0x80, 0);    // Help + F5 = Volume Up
-              else if (key == 0x3F) keystroke(0x82, 0);    // Help + F6 = Play/Pause
-              else if (key == 0x40) keystroke(0x85, 0);    // Help + F7 = Stop
-              else if (key == 0x41) keystroke(0x86, 0);    // Help + F8 = Previous Track
-              else if (key == 0x42) keystroke(0x87, 0);    // Help + F9 = Next Track
-              else if (key == 0x43) keystroke(0x65, 0);    // Help + F10 = Application/Special Key
+              else if (key == 0x52) keystroke(0x7F, 0);    // Help + F3 = Mute
+              else if (key == 0x53) keystroke(0x81, 0);    // Help + F4 = Volume Down
+              else if (key == 0x54) keystroke(0x80, 0);    // Help + F5 = Volume Up
+              else if (key == 0x55) keystroke(0x82, 0);    // Help + F6 = Play/Pause
+              else if (key == 0x56) keystroke(0x85, 0);    // Help + F7 = Stop
+              else if (key == 0x57) keystroke(0x86, 0);    // Help + F8 = Previous Track
+              else if (key == 0x58) keystroke(0x87, 0);    // Help + F9 = Next Track
+              else if (key == 0x59) keystroke(0x65, 0);    // Help + F10 = Application/Special Key
             }
             else {
               if (key==0x5A) keystroke(0x26,0x20); // (
@@ -169,7 +186,7 @@ void keypress(uint8_t k) {
       }
     }
   }
-  HID_SendReport(2,&_keyReport,8);
+  HID().SendReport(2,&_keyReport,8);
 }
 
 
@@ -181,7 +198,7 @@ void keyrelease(uint8_t k) {
       if (_keyReport.keys[i] == ktab[key]) _keyReport.keys[i] = 0;
     }
   }
-  HID_SendReport(2,&_keyReport,8);
+  HID().SendReport(2,&_keyReport,8);
 }
 
 
@@ -192,10 +209,10 @@ void keystroke(uint8_t k, uint8_t m) {
       if (_keyReport.keys[i] == 0) {
          _keyReport.keys[i] = k;
          _keyReport.modifiers = m;
-         HID_SendReport(2,&_keyReport,8);
+         HID().SendReport(2,&_keyReport,8);
          _keyReport.keys[i] = 0;
          _keyReport.modifiers = memomodifiers; // recover modifier state
-         HID_SendReport(2,&_keyReport,8);
+         HID().SendReport(2,&_keyReport,8);
          break;
       }
     }
