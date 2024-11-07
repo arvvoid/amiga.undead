@@ -119,17 +119,20 @@ void loop() {
               else if (key == 0x5A) keystroke(0x53, 0);    // NumLock
               else if (key == 0x5B) keystroke(0x47, 0);    // ScrollLock
               else if (key == 0x5D) keystroke(0x46, 0);    // PrtSc
-              else if (key == 0x52) keystroke(0x4B, 0);    // Arrow Up + Help = Page Up
-              else if (key == 0x51) keystroke(0x4E, 0);    // Arrow Down + Help = Page Down
-              else if (key == 0x50) keystroke(0x49, 0);    // Arrow Left + Help = Insert
-              else if (key == 0x3C) keystroke(0x7F, 0);    // F3 + Help = Mute
-              else if (key == 0x3D) keystroke(0x81, 0);    // F4 + Help = Volume Down
-              else if (key == 0x3E) keystroke(0x80, 0);    // F5 + Help = Volume Up
-              else if (key == 0x3F) keystroke(0x82, 0);    // F6 + Help = Play/Pause
-              else if (key == 0x40) keystroke(0x85, 0);    // F7 + Help = Stop
-              else if (key == 0x41) keystroke(0x86, 0);    // F8 + Help = Previous Track
-              else if (key == 0x42) keystroke(0x87, 0);    // F9 + Help = Next Track
-              else if (key == 0x43) keystroke(0x4A, 0);    // F10 + Help = Application/Special key
+              else if (key == 0x0F) keystroke(0x49, 0);    // Insert
+              else if (key == 0x3C) keystroke(0x4C, 0);    // Delete
+              else if (key == 0x1F) keystroke(0x4E, 0);    // Page Down
+              else if (key == 0x3F) keystroke(0x4B, 0);    // Page Up
+              else if (key == 0x3D) keystroke(0x4A, 0);    // Home
+              else if (key == 0x1D) keystroke(0x4D, 0);    // End
+              else if (key == 0x3C) keystroke(0x7F, 0);    // Help + F3 = Mute
+              else if (key == 0x3D) keystroke(0x81, 0);    // Help + F4 = Volume Down
+              else if (key == 0x3E) keystroke(0x80, 0);    // Help + F5 = Volume Up
+              else if (key == 0x3F) keystroke(0x82, 0);    // Help + F6 = Play/Pause
+              else if (key == 0x40) keystroke(0x85, 0);    // Help + F7 = Stop
+              else if (key == 0x41) keystroke(0x86, 0);    // Help + F8 = Previous Track
+              else if (key == 0x42) keystroke(0x87, 0);    // Help + F9 = Next Track
+              else if (key == 0x43) keystroke(0x65, 0);    // Help + F10 = Application/Special Key
             }
             else {
               if (key==0x5A) keystroke(0x26,0x20); // (
