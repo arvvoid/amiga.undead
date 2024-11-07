@@ -136,6 +136,14 @@ The **Help** key on the Amiga 500 keyboard serves as a modifier, enabling additi
 | **Help + F9**                 | Next Track             |
 | **Help + F10**                | Application/Special Key|
 
+### Important Note about NumLock
+
+When **NumLock** is turned **off**, the following keys on the numeric keypad function as navigation keys by default:
+- **Insert**, **Delete**, **Home**, **End**, **Page Up**, and **Page Down**.
+- The **arrow keys** on the numeric keypad (2, 4, 6, and 8) also function as cursor movement keys.
+
+With **NumLock** turned **on**, these keys will function as standard numeric keys instead. Con be conbined with Help key for alternative function.
+
 ### Key Function Descriptions
 
 - **Help**: Activates specific special functions or multimedia controls when used in combination with other keys.
