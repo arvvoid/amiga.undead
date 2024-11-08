@@ -19,10 +19,11 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y gcc-arm-linux-gnueabihf libc6-dev
+        sudo apt-get install -y gcc-arm-linux-gnueabihf libc6-dev wget
         wget http://www.lysator.liu.se/~nisse/misc/argp-standalone-1.3.tar.gz
         tar -xzf argp-standalone-1.3.tar.gz
         cd argp-standalone-1.3
+        sed -i 's/^\\(#  define ARGP_EI extern __inline__\\)$/ARGP_EI __inline__ extern/' argp.h
         ./configure
         make
         sudo make install
