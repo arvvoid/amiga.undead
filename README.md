@@ -1,3 +1,5 @@
+[![Build LED Control](https://github.com/arvvoid/amiga.undead/actions/workflows/build-led-control.yml/badge.svg)](https://github.com/arvvoid/amiga.undead/actions/workflows/build-led-control.yml)
+
 # "Brain transplant" of my old AMIGA500
 
 WRITTEN: October 14, 2014
