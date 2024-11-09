@@ -1,4 +1,4 @@
-[![Build LED Control](https://github.com/arvvoid/amiga.undead/actions/workflows/build-led-control.yml/badge.svg)](https://github.com/arvvoid/amiga.undead/actions/workflows/build-led-control.yml) [![Build Arduino Leonardo Kyb](https://github.com/arvvoid/Amiga500-USB-Keyboard-Leonardo/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/arvvoid/Amiga500-USB-Keyboard-Leonardo/actions/workflows/verify.yml)
+[![Build LED Control](https://github.com/arvvoid/amiga.undead/actions/workflows/build-led-control.yml/badge.svg)](https://github.com/arvvoid/amiga.undead/actions/workflows/build-led-control.yml) [![Build Arduino Leonardo Kyb](https://github.com/arvvoid/amiga.undead/actions/workflows/build-kyb.yml/badge.svg)](https://github.com/arvvoid/amiga.undead/actions/workflows/build-kyb.yml)
 
 # "Brain transplant" of my old AMIGA500
 
