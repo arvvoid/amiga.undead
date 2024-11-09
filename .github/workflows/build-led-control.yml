@@ -10,24 +10,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y gcc-arm-linux-gnueabihf libc6-dev wget
-        wget http://www.lysator.liu.se/~nisse/misc/argp-standalone-1.3.tar.gz
-        tar -xzf argp-standalone-1.3.tar.gz
-        cd argp-standalone-1.3
-        sed -i 's/^\\(#  define ARGP_EI extern __inline__\\)$/ARGP_EI __inline__ extern/' argp.h
-        ./configure
-        make
-        sudo make install
-
     - name: Compile C program
       run: |
-        arm-linux-gnueabihf-gcc -o led_control/amiga_led_control_odroid led_control/amiga_led_control_odroid.c
+       gcc -o led_control/amiga_led_control_odroid led_control/amiga_led_control_odroid.c
