@@ -1,21 +1,21 @@
 name: Build LED Control
-
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
-
+      - main
 jobs:
   build:
-    runs-on: self-hosted
-
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc-arm-linux-gnueabihf
     - name: Compile C program
       run: |
-        gcc -o led_control/amiga_led_control_odroid led_control/amiga_led_control_odroid.c
+        arm-linux-gnueabihf-gcc -o led_control/amiga_led_control_odroid led_control/amiga_led_control_odroid.c
