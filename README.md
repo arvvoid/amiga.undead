@@ -39,12 +39,9 @@ I used an Arduino Leonardo microcontroler to turn the old custom made Amiga500 k
 
 ![](images/image12.jpg)
 
-The program for the Arduino Leonardo microcontroler:
+The program and pin out for the Arduino Leonardo microcontroler:
 
-[a500_keyboard_leonardo.ino](https://github.com/arvvoid/amiga.undead/blob/master/leonardo_a500_keyboard/a500_keyboard_leonardo.ino)
-
-
-[PIN OUT](https://github.com/arvvoid/amiga.undead/blob/master/leonardo_a500_keyboard/pins.txt)
+[Amiga500-USB-Keyboard-Leonardo](https://github.com/arvvoid/Amiga500-USB-Keyboard-Leonardo)
 
 The joysticks connectors on the amiga motherboard turned to be unusable. It's very hard to pull them out from the board without breaking them. I will have to buy 2 DB9 connectors.
 
