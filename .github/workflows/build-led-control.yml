@@ -18,4 +18,4 @@ jobs:
 
     - name: Compile C program
       run: |
-       gcc -o led_control/amiga_led_control_odroid led_control/amiga_led_control_odroid.c
+        gcc -o led_control/amiga_led_control_odroid led_control/amiga_led_control_odroid.c
