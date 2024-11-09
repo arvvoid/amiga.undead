@@ -1,3 +1,4 @@
 [submodule "Amiga500-USB-Keyboard-Leonardo"]
 	path = Amiga500-USB-Keyboard-Leonardo
 	url = https://github.com/arvvoid/Amiga500-USB-Keyboard-Leonardo.git
+	branch = main
