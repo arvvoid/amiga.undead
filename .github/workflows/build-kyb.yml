@@ -18,7 +18,8 @@ jobs:
     - name: Checkout repository with submodules
       uses: actions/checkout@v3
       with:
-        submodules: recursive  # This initializes and updates submodules recursively
+        submodules: true       # Initializes submodules at the specified commit without updating
+        fetch-depth: 0         # Ensures full commit history for submodules
 
     - name: Set up Arduino CLI
       uses: arduino/setup-arduino-cli@v2
