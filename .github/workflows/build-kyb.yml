@@ -1,6 +1,14 @@
 name: Build Arduino Leonardo Kyb
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  schedule:
+    - cron: "0 0 1 * *"  # Runs at midnight on the first day of each month
 
 jobs:
   build:
