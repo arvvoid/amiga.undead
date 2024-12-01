@@ -1,1 +1,19 @@
-theme: jekyll-theme-architect
+remote_theme: julianolf/jekyll-theme-8bit
+
+# Site settings
+title: Amiga 500 Undead
+description: A "brain transplant" for the Amiga 500, replacing its motherboard with a modern single-board computer while preserving the original keyboard, joystick ports, and LED drive indicators.
+
+# Author settings
+author:
+  name: Luka Void
+  email: luka@lukavoid.xyz
+
+# Social settings
+social:
+  github: https://github.com/arvvoid
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
