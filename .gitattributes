@@ -1,0 +1,11 @@
+CNAME export-ignore
+_config.yml export-ignore
+.gitignore export-ignore
+.gitattributes export-ignore
+.github/ export-ignore
+
+a500kybhid/CNAME export-ignore
+a500kybhid/_config.yml export-ignore
+a500kybhid/.gitignore export-ignore
+a500kybhid/.gitattributes export-ignore
+a500kybhid/.github/ export-ignore
